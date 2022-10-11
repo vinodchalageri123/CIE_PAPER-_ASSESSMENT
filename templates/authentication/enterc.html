@@ -1,0 +1,10 @@
+{% include 'authentication/base.html' %}
+
+{% block content %}
+
+<center>
+
+    <h2>Please click here to proceed for the list of semesters</h2><br>
+    <button class="btn btn-outline-secondary btn-lg"><a href="{% url 'sem-listc' %}"> Semester List </button></a>
+</center>
+{% endblock %}

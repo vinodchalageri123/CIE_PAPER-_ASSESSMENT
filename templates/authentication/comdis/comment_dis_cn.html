@@ -1,0 +1,20 @@
+{% include 'authentication/base.html' %}
+
+{% block content %}
+
+{% for i in list5 %}
+<br>
+<div class="card" style="width: 75rem;">
+    <div class="card-body col-10">
+    <h5 class="card-title">{{ i.name }} : {{ i.comments_cn }}</h5>
+    <p class="card-text"> {{ i.date_added }} </p>
+    <!-- <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> -->
+    </div>
+</div>
+    
+
+    
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% include 'authentication/base.html' %}
+<center>
+    <h1> Name of subjects </h1><br><br>
+    <div class="form-control col-5">
+        <button type="button" class="form-control btn btn-dark btn-lg"><a href="{% url 'emf-disp' %}">Enterpreneurship, Management and Finance </button></a>
+        <br><br>
+        <button type="button" class="form-control btn btn-dark btn-lg"><a href="{% url 'ws-disp' %}">Web Services </button></a><br><br>
+        <button type="button" class=" form-control btn btn-dark btn-lg"><a href="{% url 'ml-disp' %}">Machine Learning </button></a><br><br>
+        <button type="button" class="form-control btn btn-dark btn-lg"><a href="{% url 'cn-disp' %}">Computer Networks </button></a><br><br>
+        <button type="button" class="form-control btn btn-dark btn-lg"><a href="{% url 'iot-disp' %}">Internet Of Things </button></a><br><br>
+      
+    </div>
+</center>

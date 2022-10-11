@@ -1,0 +1,23 @@
+{% include 'authentication/base.html' %}
+
+{% block content %}
+
+<center>
+{% for i in list2 %}
+<br>
+    <div class="card" style="width: 75rem;">
+        <div class="card-body col-10">
+        <h5 class="card-title">{{ i.name }} : {{ i.comments_iot }}</h5>
+        <p class="card-text"> {{ i.date_added }} </p>
+        <!-- <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a> -->
+        </div>
+    </div>
+
+    <br/>
+
+    
+
+{% endfor %}
+</center>
+{% endblock %}

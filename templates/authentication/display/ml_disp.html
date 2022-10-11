@@ -1,0 +1,22 @@
+<!-- {% load static %} -->
+{% include 'authentication/base.html' %}
+
+{% block content %}
+    <!-- {% if emf.cie_image %}
+        <li> <img src="{{ emf.cie_image.url }}"></li>
+    {% endif %}  -->
+
+{% for i in test_list4 %}
+<div class="container" enctype="multipart/form-data">
+    {{ i.ml_title }}<br/>
+    <img src="{{ i.ml_cie_image.url }}" width="25%" ><br/>
+</div>
+{% endfor %}
+
+    <!-- {% if img_obj %}
+        <h2>successfull : {{ img_obj.title }}</h2>
+        <img src="{{ img_obj.cie_image.url }}">
+    {% endif %} -->
+<br/>
+<button type="button" class="btn btn-dark"><a href="{% url 'comment-ml' %}">Valuable Feedback</button></a>
+{% endblock %}

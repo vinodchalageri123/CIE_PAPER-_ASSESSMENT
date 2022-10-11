@@ -1,0 +1,20 @@
+{% include 'authentication/base.html' %}
+
+{% block content %}
+
+    <center>
+        {% if submitted5 %}
+            <h2>You have already given the feeback.... please visit next time!!!!</h2>
+        {% else %}
+            
+                <div class=" col-10">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="submit" class="btn btn-success">
+                    </form>
+                </div>
+            
+        {% endif %}
+    </center>
+{% endblock %}
