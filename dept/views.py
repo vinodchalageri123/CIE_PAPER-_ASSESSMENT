@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import *
 from .models import Faculty
 from django.contrib import messages
+from django.coe.mail import send_mails
 
 # Create your views here.
 def home(request):
@@ -67,6 +68,13 @@ def add_emf(request):
         form = EmfForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            send_mail(
+                        'Subject here',
+                        'Here is the message.',
+                        'from@example.com',
+                        ['to@example.com'],
+                        fail_silently=False,
+                    )
             return HttpResponseRedirect('/add_emf?submitted1=True')
     else:
         form = EmfForm
